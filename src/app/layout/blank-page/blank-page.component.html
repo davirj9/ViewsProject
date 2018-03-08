@@ -1,0 +1,32 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Form'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row">
+        <div class="col-lg-12">
+                <form (ngSubmit)="onSubmit()" #questionForm="ngForm" >    
+                    <h4>Olá você tem um tempinho para responder umas perguntas ?</h4>
+                    <br>
+                    <fieldset class="form-group">
+                        <label for="name">Nome:</label>
+                        <div>
+                            <input type="text" class="form-group" id="nome">
+                        </div>
+                        <h6>É a primeira vez aqui ?</h6>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="sim" checked=""> Sim
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="nao"> Não
+                            </label>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" title="Enviar" value="Enviar" />
+                        </div>
+                    </fieldset>
+                </form>
+        </div>
+    </div>
+</div>
